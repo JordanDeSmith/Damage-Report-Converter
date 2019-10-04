@@ -1,0 +1,576 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		17708F932347FBD900533765 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17708F922347FBD900533765 /* AppDelegate.swift */; };
+		17708F952347FBD900533765 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17708F942347FBD900533765 /* ViewController.swift */; };
+		17708F972347FBDA00533765 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17708F962347FBDA00533765 /* Assets.xcassets */; };
+		17708F9A2347FBDA00533765 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17708F982347FBDA00533765 /* Main.storyboard */; };
+		17708FA62347FBDA00533765 /* Damage_Report_ConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17708FA52347FBDA00533765 /* Damage_Report_ConverterTests.swift */; };
+		17708FB12347FBDA00533765 /* Damage_Report_ConverterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17708FB02347FBDA00533765 /* Damage_Report_ConverterUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		17708FA22347FBDA00533765 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 17708F872347FBD900533765 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 17708F8E2347FBD900533765;
+			remoteInfo = "Damage Report Converter";
+		};
+		17708FAD2347FBDA00533765 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 17708F872347FBD900533765 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 17708F8E2347FBD900533765;
+			remoteInfo = "Damage Report Converter";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		17708F8F2347FBD900533765 /* Damage Report Converter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Damage Report Converter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		17708F922347FBD900533765 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		17708F942347FBD900533765 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		17708F962347FBDA00533765 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		17708F992347FBDA00533765 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		17708F9B2347FBDA00533765 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17708F9C2347FBDA00533765 /* Damage_Report_Converter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Damage_Report_Converter.entitlements; sourceTree = "<group>"; };
+		17708FA12347FBDA00533765 /* Damage Report ConverterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Damage Report ConverterTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		17708FA52347FBDA00533765 /* Damage_Report_ConverterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Damage_Report_ConverterTests.swift; sourceTree = "<group>"; };
+		17708FA72347FBDA00533765 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17708FAC2347FBDA00533765 /* Damage Report ConverterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Damage Report ConverterUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		17708FB02347FBDA00533765 /* Damage_Report_ConverterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Damage_Report_ConverterUITests.swift; sourceTree = "<group>"; };
+		17708FB22347FBDA00533765 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		17708F8C2347FBD900533765 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17708F9E2347FBDA00533765 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17708FA92347FBDA00533765 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		17708F862347FBD900533765 = {
+			isa = PBXGroup;
+			children = (
+				17708F912347FBD900533765 /* Damage Report Converter */,
+				17708FA42347FBDA00533765 /* Damage Report ConverterTests */,
+				17708FAF2347FBDA00533765 /* Damage Report ConverterUITests */,
+				17708F902347FBD900533765 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		17708F902347FBD900533765 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				17708F8F2347FBD900533765 /* Damage Report Converter.app */,
+				17708FA12347FBDA00533765 /* Damage Report ConverterTests.xctest */,
+				17708FAC2347FBDA00533765 /* Damage Report ConverterUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		17708F912347FBD900533765 /* Damage Report Converter */ = {
+			isa = PBXGroup;
+			children = (
+				17708F922347FBD900533765 /* AppDelegate.swift */,
+				17708F942347FBD900533765 /* ViewController.swift */,
+				17708F962347FBDA00533765 /* Assets.xcassets */,
+				17708F982347FBDA00533765 /* Main.storyboard */,
+				17708F9B2347FBDA00533765 /* Info.plist */,
+				17708F9C2347FBDA00533765 /* Damage_Report_Converter.entitlements */,
+			);
+			path = "Damage Report Converter";
+			sourceTree = "<group>";
+		};
+		17708FA42347FBDA00533765 /* Damage Report ConverterTests */ = {
+			isa = PBXGroup;
+			children = (
+				17708FA52347FBDA00533765 /* Damage_Report_ConverterTests.swift */,
+				17708FA72347FBDA00533765 /* Info.plist */,
+			);
+			path = "Damage Report ConverterTests";
+			sourceTree = "<group>";
+		};
+		17708FAF2347FBDA00533765 /* Damage Report ConverterUITests */ = {
+			isa = PBXGroup;
+			children = (
+				17708FB02347FBDA00533765 /* Damage_Report_ConverterUITests.swift */,
+				17708FB22347FBDA00533765 /* Info.plist */,
+			);
+			path = "Damage Report ConverterUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		17708F8E2347FBD900533765 /* Damage Report Converter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17708FB52347FBDA00533765 /* Build configuration list for PBXNativeTarget "Damage Report Converter" */;
+			buildPhases = (
+				17708F8B2347FBD900533765 /* Sources */,
+				17708F8C2347FBD900533765 /* Frameworks */,
+				17708F8D2347FBD900533765 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Damage Report Converter";
+			productName = "Damage Report Converter";
+			productReference = 17708F8F2347FBD900533765 /* Damage Report Converter.app */;
+			productType = "com.apple.product-type.application";
+		};
+		17708FA02347FBDA00533765 /* Damage Report ConverterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17708FB82347FBDA00533765 /* Build configuration list for PBXNativeTarget "Damage Report ConverterTests" */;
+			buildPhases = (
+				17708F9D2347FBDA00533765 /* Sources */,
+				17708F9E2347FBDA00533765 /* Frameworks */,
+				17708F9F2347FBDA00533765 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				17708FA32347FBDA00533765 /* PBXTargetDependency */,
+			);
+			name = "Damage Report ConverterTests";
+			productName = "Damage Report ConverterTests";
+			productReference = 17708FA12347FBDA00533765 /* Damage Report ConverterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		17708FAB2347FBDA00533765 /* Damage Report ConverterUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17708FBB2347FBDA00533765 /* Build configuration list for PBXNativeTarget "Damage Report ConverterUITests" */;
+			buildPhases = (
+				17708FA82347FBDA00533765 /* Sources */,
+				17708FA92347FBDA00533765 /* Frameworks */,
+				17708FAA2347FBDA00533765 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				17708FAE2347FBDA00533765 /* PBXTargetDependency */,
+			);
+			name = "Damage Report ConverterUITests";
+			productName = "Damage Report ConverterUITests";
+			productReference = 17708FAC2347FBDA00533765 /* Damage Report ConverterUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		17708F872347FBD900533765 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+				ORGANIZATIONNAME = "Jordan Smith";
+				TargetAttributes = {
+					17708F8E2347FBD900533765 = {
+						CreatedOnToolsVersion = 11.0;
+					};
+					17708FA02347FBDA00533765 = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = 17708F8E2347FBD900533765;
+					};
+					17708FAB2347FBDA00533765 = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = 17708F8E2347FBD900533765;
+					};
+				};
+			};
+			buildConfigurationList = 17708F8A2347FBD900533765 /* Build configuration list for PBXProject "Damage Report Converter" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 17708F862347FBD900533765;
+			productRefGroup = 17708F902347FBD900533765 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				17708F8E2347FBD900533765 /* Damage Report Converter */,
+				17708FA02347FBDA00533765 /* Damage Report ConverterTests */,
+				17708FAB2347FBDA00533765 /* Damage Report ConverterUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		17708F8D2347FBD900533765 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17708F972347FBDA00533765 /* Assets.xcassets in Resources */,
+				17708F9A2347FBDA00533765 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17708F9F2347FBDA00533765 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17708FAA2347FBDA00533765 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		17708F8B2347FBD900533765 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17708F952347FBD900533765 /* ViewController.swift in Sources */,
+				17708F932347FBD900533765 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17708F9D2347FBDA00533765 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17708FA62347FBDA00533765 /* Damage_Report_ConverterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17708FA82347FBDA00533765 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17708FB12347FBDA00533765 /* Damage_Report_ConverterUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		17708FA32347FBDA00533765 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 17708F8E2347FBD900533765 /* Damage Report Converter */;
+			targetProxy = 17708FA22347FBDA00533765 /* PBXContainerItemProxy */;
+		};
+		17708FAE2347FBDA00533765 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 17708F8E2347FBD900533765 /* Damage Report Converter */;
+			targetProxy = 17708FAD2347FBDA00533765 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		17708F982347FBDA00533765 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				17708F992347FBDA00533765 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		17708FB32347FBDA00533765 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		17708FB42347FBDA00533765 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		17708FB62347FBDA00533765 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Damage Report Converter/Damage_Report_Converter.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Damage Report Converter/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Me.Damage-Report-Converter";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		17708FB72347FBDA00533765 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Damage Report Converter/Damage_Report_Converter.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Damage Report Converter/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Me.Damage-Report-Converter";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		17708FB92347FBDA00533765 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Damage Report ConverterTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = "Me.Damage-Report-ConverterTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Damage Report Converter.app/Contents/MacOS/Damage Report Converter";
+			};
+			name = Debug;
+		};
+		17708FBA2347FBDA00533765 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Damage Report ConverterTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = "Me.Damage-Report-ConverterTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Damage Report Converter.app/Contents/MacOS/Damage Report Converter";
+			};
+			name = Release;
+		};
+		17708FBC2347FBDA00533765 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Damage Report ConverterUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Me.Damage-Report-ConverterUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "Damage Report Converter";
+			};
+			name = Debug;
+		};
+		17708FBD2347FBDA00533765 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Damage Report ConverterUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Me.Damage-Report-ConverterUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "Damage Report Converter";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		17708F8A2347FBD900533765 /* Build configuration list for PBXProject "Damage Report Converter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17708FB32347FBDA00533765 /* Debug */,
+				17708FB42347FBDA00533765 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		17708FB52347FBDA00533765 /* Build configuration list for PBXNativeTarget "Damage Report Converter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17708FB62347FBDA00533765 /* Debug */,
+				17708FB72347FBDA00533765 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		17708FB82347FBDA00533765 /* Build configuration list for PBXNativeTarget "Damage Report ConverterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17708FB92347FBDA00533765 /* Debug */,
+				17708FBA2347FBDA00533765 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		17708FBB2347FBDA00533765 /* Build configuration list for PBXNativeTarget "Damage Report ConverterUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17708FBC2347FBDA00533765 /* Debug */,
+				17708FBD2347FBDA00533765 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 17708F872347FBD900533765 /* Project object */;
+}
