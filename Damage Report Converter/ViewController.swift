@@ -10,6 +10,10 @@ import Cocoa
 
 class ViewController: NSViewController {
 
+    @IBOutlet weak var FileLabel: NSTextField!
+    
+    var fullPath = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,6 +26,23 @@ class ViewController: NSViewController {
         }
     }
 
+    @IBAction func selectFileClicked(sender: AnyObject) {
+        let fileSelect = NSOpenPanel()
+        fileSelect.title = "Select a Mercury Damage Report"
+        fileSelect.allowsMultipleSelection = false
+        fileSelect.canChooseDirectories = false
+        fileSelect.allowedFileTypes = ["txt"]
+        
+        if (fileSelect.runModal() == NSApplication.ModalResponse.OK )
+        {
+            
+            if (fileSelect.urls.count > 0) {
+                let file = fileSelect.urls[0].lastPathComponent
+                fullPath = fileSelect.urls[0].absoluteString
+                FileLabel.stringValue = file
+            }
+        }
+    }
 
 }
 

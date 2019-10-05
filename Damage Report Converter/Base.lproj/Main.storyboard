@@ -1,7 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11134" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11134"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14868"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -673,7 +675,7 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Damage_Report_Converter" customModuleProvider="target"/>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -703,11 +705,50 @@
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="Damage_Report_Converter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mCS-FO-28s">
+                                <rect key="frame" x="279" y="150" width="117" height="32"/>
+                                <buttonCell key="cell" type="push" title="Select File" alternateTitle="Test" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="6cJ-rW-cOz">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="selectFileClickedWithSender:" target="XfG-lQ-9wD" id="2Nn-vg-8tJ"/>
+                                </connections>
+                            </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bNu-63-ahY">
+                                <rect key="frame" x="45" y="155" width="189" height="23"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" placeholderString="No File Selected" id="xcD-8G-pjV">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3Bw-aG-KrA">
+                                <rect key="frame" x="45" y="186" width="113" height="21"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Selected File:" id="kgw-6P-req">
+                                    <font key="font" metaFont="system" size="18"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="3Bw-aG-KrA" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="63" id="3HD-N8-3fV"/>
+                            <constraint firstItem="mCS-FO-28s" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="92" id="BmN-0X-d9k"/>
+                            <constraint firstItem="bNu-63-ahY" firstAttribute="top" secondItem="3Bw-aG-KrA" secondAttribute="bottom" constant="8" symbolic="YES" id="MlJ-cs-ahM"/>
+                            <constraint firstItem="mCS-FO-28s" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="285" id="Sh9-IM-Y6y"/>
+                            <constraint firstItem="3Bw-aG-KrA" firstAttribute="leading" secondItem="bNu-63-ahY" secondAttribute="leading" id="wjU-dj-Td8"/>
+                            <constraint firstItem="3Bw-aG-KrA" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="47" id="wvV-lX-3tY"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="FileLabel" destination="bNu-63-ahY" id="E1n-I8-kIn"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
