@@ -712,6 +712,9 @@
                         <subviews>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mCS-FO-28s">
                                 <rect key="frame" x="279" y="150" width="117" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="105" id="oZ3-H0-pK6"/>
+                                </constraints>
                                 <buttonCell key="cell" type="push" title="Select File" alternateTitle="Test" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="6cJ-rW-cOz">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -720,27 +723,19 @@
                                     <action selector="selectFileClickedWithSender:" target="XfG-lQ-9wD" id="2Nn-vg-8tJ"/>
                                 </connections>
                             </button>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bNu-63-ahY">
-                                <rect key="frame" x="45" y="155" width="189" height="23"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="23" id="VpR-FX-V19"/>
-                                </constraints>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bNu-63-ahY">
+                                <rect key="frame" x="45" y="115" width="206" height="102"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" placeholderString="No File Selected" id="xcD-8G-pjV">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3Bw-aG-KrA">
-                                <rect key="frame" x="45" y="186" width="113" height="21"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Selected File:" id="kgw-6P-req">
-                                    <font key="font" metaFont="system" size="18"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bV0-La-IoJ">
                                 <rect key="frame" x="63" y="79" width="89" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="pzt-ZJ-oXv"/>
+                                </constraints>
                                 <buttonCell key="cell" type="push" title="Convert" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="MSA-o7-sJa">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -749,23 +744,46 @@
                                     <action selector="convertClickedWithSender:" target="XfG-lQ-9wD" id="Z8L-SV-XbR"/>
                                 </connections>
                             </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="IiA-h2-cGB">
+                                <rect key="frame" x="273" y="86" width="113" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="109" id="zMt-LQ-EKJ"/>
+                                </constraints>
+                                <textFieldCell key="cell" lineBreakMode="clipping" id="j3E-I0-6OJ">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Bw-aG-KrA">
+                                <rect key="frame" x="45" y="220" width="132" height="21"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Selected File(s):" id="kgw-6P-req">
+                                    <font key="font" metaFont="system" size="18"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="3Bw-aG-KrA" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="63" id="3HD-N8-3fV"/>
-                            <constraint firstItem="mCS-FO-28s" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="92" id="BmN-0X-d9k"/>
-                            <constraint firstItem="bNu-63-ahY" firstAttribute="top" secondItem="3Bw-aG-KrA" secondAttribute="bottom" constant="8" symbolic="YES" id="MlJ-cs-ahM"/>
-                            <constraint firstItem="mCS-FO-28s" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="285" id="Sh9-IM-Y6y"/>
-                            <constraint firstAttribute="trailing" secondItem="mCS-FO-28s" secondAttribute="trailing" constant="90" id="V8S-Jt-W0g"/>
-                            <constraint firstItem="mCS-FO-28s" firstAttribute="leading" secondItem="bNu-63-ahY" secondAttribute="trailing" constant="53" id="cPD-Zi-48Y"/>
-                            <constraint firstItem="bV0-La-IoJ" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="69" id="eck-1e-Dhb"/>
-                            <constraint firstItem="bV0-La-IoJ" firstAttribute="top" secondItem="bNu-63-ahY" secondAttribute="bottom" constant="48" id="q6b-Y5-8yC"/>
-                            <constraint firstItem="3Bw-aG-KrA" firstAttribute="leading" secondItem="bNu-63-ahY" secondAttribute="leading" id="wjU-dj-Td8"/>
-                            <constraint firstItem="3Bw-aG-KrA" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="47" id="wvV-lX-3tY"/>
+                            <constraint firstItem="3Bw-aG-KrA" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="47" id="04y-Tp-H9L"/>
+                            <constraint firstItem="bNu-63-ahY" firstAttribute="top" secondItem="mCS-FO-28s" secondAttribute="top" id="4Vq-H2-EhA"/>
+                            <constraint firstItem="IiA-h2-cGB" firstAttribute="top" secondItem="mCS-FO-28s" secondAttribute="bottom" constant="55" id="GKc-w1-XsZ"/>
+                            <constraint firstAttribute="trailing" secondItem="mCS-FO-28s" secondAttribute="trailing" constant="90" id="Ik1-Pj-Buq"/>
+                            <constraint firstItem="mCS-FO-28s" firstAttribute="leading" secondItem="bNu-63-ahY" secondAttribute="trailing" constant="53" id="OIA-te-jAh"/>
+                            <constraint firstItem="bNu-63-ahY" firstAttribute="top" secondItem="3Bw-aG-KrA" secondAttribute="bottom" constant="8" symbolic="YES" id="ONw-Fm-hva"/>
+                            <constraint firstItem="bV0-La-IoJ" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="69" id="R0V-iL-Wj9"/>
+                            <constraint firstItem="bV0-La-IoJ" firstAttribute="bottom" secondItem="IiA-h2-cGB" secondAttribute="bottom" id="SB5-3K-Odn"/>
+                            <constraint firstItem="3Bw-aG-KrA" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="63" id="Zkj-SC-wAt"/>
+                            <constraint firstAttribute="bottom" secondItem="bV0-La-IoJ" secondAttribute="bottom" constant="86" id="j1r-L8-as5"/>
+                            <constraint firstItem="bV0-La-IoJ" firstAttribute="top" secondItem="bNu-63-ahY" secondAttribute="bottom" constant="48" id="pP6-RU-1jr"/>
+                            <constraint firstItem="3Bw-aG-KrA" firstAttribute="leading" secondItem="bNu-63-ahY" secondAttribute="leading" id="wCp-eH-87V"/>
+                            <constraint firstAttribute="trailing" secondItem="IiA-h2-cGB" secondAttribute="trailing" constant="96" id="ze1-bn-3zW"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="FileLabel" destination="bNu-63-ahY" id="E1n-I8-kIn"/>
+                        <outlet property="completeLabel" destination="IiA-h2-cGB" id="HZr-uA-naY"/>
                         <outlet property="convertButton" destination="bV0-La-IoJ" id="9TZ-hK-yLW"/>
+                        <outlet property="fileLabel" destination="bNu-63-ahY" id="E1n-I8-kIn"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

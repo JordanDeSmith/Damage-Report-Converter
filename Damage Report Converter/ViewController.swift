@@ -10,8 +10,9 @@ import Cocoa
 
 class ViewController: NSViewController {
 
-    @IBOutlet weak var FileLabel: NSTextField!
+    @IBOutlet weak var fileLabel: NSTextField!
     @IBOutlet weak var convertButton: NSButton!
+    @IBOutlet weak var completeLabel: NSTextField!
     var fileManager = FileManager()
     
     var fileName: String!
@@ -27,12 +28,13 @@ class ViewController: NSViewController {
     override var representedObject: Any? {
         didSet {
         // Update the view, if already loaded.
-            FileLabel.placeholderString = "No File Selected"
-            FileLabel.stringValue = ""
+            fileLabel.placeholderString = "No File Selected"
+            fileLabel.stringValue = ""
         }
     }
 
     @IBAction func selectFileClicked(sender: AnyObject) {
+        completeLabel.stringValue = ""
         let fileSelect = NSOpenPanel()
         fileSelect.title = "Select a Mercury Damage Report"
         fileSelect.allowsMultipleSelection = false
@@ -45,26 +47,36 @@ class ViewController: NSViewController {
             if (fileSelect.urls.count > 0) {
                 fileName = fileSelect.urls[0].lastPathComponent
                 fullURL = fileSelect.urls[0]
-                FileLabel.stringValue = fileName
+                fileLabel.stringValue = fileName
                 convertButton.isEnabled = true
             }
         }
     }
     @IBAction func convertClicked(sender: AnyObject) {
+        completeLabel.stringValue = "Processing..."
         var newFile = ""
         var newFileName = fullURL.deletingLastPathComponent().path
+        var count = 1
+        //var firstLine = true
+        
         if fileManager.fileExists(atPath: fullURL.path) {
             do {
                 let fileData = try String(contentsOf: fullURL)
                 let stringData = fileData.components(separatedBy: .newlines)
+                
                 for line in stringData {
-                    if line != ";" {
-                        newFile.append(contentsOf: line)
+                    let lineParts = line.split(separator: ";")
+                    for step in lineParts {
+                        newFile.append("Step " + String(count) + ":\n")
+                        count += 1
+                        newFile.append(String(step) + "\n")
                     }
                 }
             }
             catch {
                 print(error)
+                completeLabel.stringValue = "Error in file"
+                return
             }
             var fileNoExtension = fileName
             for var i in (0...3) {
@@ -79,7 +91,11 @@ class ViewController: NSViewController {
             }
             catch {
                 print(error)
+                completeLabel.stringValue = "Error converting file"
+                return
             }
+            
+            completeLabel.stringValue = "Done!"
         }
     }
 
