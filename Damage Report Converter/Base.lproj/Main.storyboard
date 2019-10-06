@@ -707,11 +707,11 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="Damage_Report_Converter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="410" height="250"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mCS-FO-28s">
-                                <rect key="frame" x="279" y="150" width="117" height="32"/>
+                                <rect key="frame" x="279" y="148" width="117" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="105" id="oZ3-H0-pK6"/>
                                 </constraints>
@@ -724,7 +724,7 @@
                                 </connections>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3Bw-aG-KrA">
-                                <rect key="frame" x="45" y="220" width="132" height="21"/>
+                                <rect key="frame" x="35" y="210" width="132" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="128" id="U0X-HL-g5X"/>
                                 </constraints>
@@ -735,7 +735,7 @@
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bV0-La-IoJ">
-                                <rect key="frame" x="63" y="79" width="89" height="32"/>
+                                <rect key="frame" x="183" y="21" width="89" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="pzt-ZJ-oXv"/>
                                 </constraints>
@@ -747,9 +747,38 @@
                                     <action selector="convertClickedWithSender:" target="XfG-lQ-9wD" id="Z8L-SV-XbR"/>
                                 </connections>
                             </button>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="IiA-h2-cGB">
-                                <rect key="frame" x="273" y="86" width="113" height="16"/>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="lkx-4J-zsF">
+                                <rect key="frame" x="35" y="68" width="223" height="124"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="124" id="Wlf-Im-OdB"/>
+                                </constraints>
+                                <textFieldCell key="cell" selectable="YES" title="No file selected" id="bxJ-kW-Ro8">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ZJl-vY-lwb">
+                                <rect key="frame" x="26" y="25" width="152" height="25"/>
+                                <popUpButtonCell key="cell" type="push" title="Missing Colons" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="212-5o-hgy" id="tSu-gv-8bK">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <menu key="menu" id="o0c-JU-xrJ">
+                                        <items>
+                                            <menuItem title="Mercury-&gt;Thorium" id="skC-FN-UpK"/>
+                                            <menuItem title="Missing Colons" state="on" id="212-5o-hgy"/>
+                                            <menuItem id="kG6-tk-EPp"/>
+                                        </items>
+                                    </menu>
+                                </popUpButtonCell>
+                                <connections>
+                                    <action selector="conversionChange:" target="XfG-lQ-9wD" id="9GY-ev-iaB"/>
+                                </connections>
+                            </popUpButton>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="IiA-h2-cGB">
+                                <rect key="frame" x="283" y="31" width="113" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="klM-5q-Wcf"/>
                                     <constraint firstAttribute="width" constant="109" id="zMt-LQ-EKJ"/>
                                 </constraints>
                                 <textFieldCell key="cell" lineBreakMode="clipping" id="j3E-I0-6OJ">
@@ -758,41 +787,37 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="lkx-4J-zsF">
-                                <rect key="frame" x="45" y="115" width="223" height="97"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="97" id="Wlf-Im-OdB"/>
-                                </constraints>
-                                <textFieldCell key="cell" selectable="YES" title="No file selected" id="bxJ-kW-Ro8">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="3Bw-aG-KrA" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="47" id="04y-Tp-H9L"/>
-                            <constraint firstItem="IiA-h2-cGB" firstAttribute="top" secondItem="mCS-FO-28s" secondAttribute="bottom" constant="55" id="GKc-w1-XsZ"/>
-                            <constraint firstAttribute="trailing" secondItem="mCS-FO-28s" secondAttribute="trailing" constant="90" id="Ik1-Pj-Buq"/>
-                            <constraint firstItem="lkx-4J-zsF" firstAttribute="top" secondItem="3Bw-aG-KrA" secondAttribute="bottom" constant="8" symbolic="YES" id="KTv-cO-cqY"/>
-                            <constraint firstItem="bV0-La-IoJ" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="69" id="R0V-iL-Wj9"/>
-                            <constraint firstItem="bV0-La-IoJ" firstAttribute="bottom" secondItem="IiA-h2-cGB" secondAttribute="bottom" id="SB5-3K-Odn"/>
-                            <constraint firstItem="3Bw-aG-KrA" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="29" id="Zkj-SC-wAt"/>
-                            <constraint firstAttribute="bottom" secondItem="bV0-La-IoJ" secondAttribute="bottom" constant="86" id="j1r-L8-as5"/>
-                            <constraint firstItem="mCS-FO-28s" firstAttribute="leading" secondItem="lkx-4J-zsF" secondAttribute="trailing" constant="19" id="nY9-6h-Cne"/>
+                            <constraint firstItem="ZJl-vY-lwb" firstAttribute="baseline" secondItem="bV0-La-IoJ" secondAttribute="baseline" id="7sj-4h-bNx"/>
+                            <constraint firstItem="bV0-La-IoJ" firstAttribute="baseline" secondItem="ZJl-vY-lwb" secondAttribute="firstBaseline" id="E5H-8Q-As9"/>
+                            <constraint firstItem="ZJl-vY-lwb" firstAttribute="top" secondItem="lkx-4J-zsF" secondAttribute="bottom" constant="19" id="Eop-zZ-3Kv"/>
+                            <constraint firstItem="IiA-h2-cGB" firstAttribute="top" secondItem="mCS-FO-28s" secondAttribute="bottom" constant="108" id="GKc-w1-XsZ"/>
+                            <constraint firstAttribute="trailing" secondItem="mCS-FO-28s" secondAttribute="trailing" constant="20" symbolic="YES" id="GWi-Q3-aCl"/>
+                            <constraint firstItem="lkx-4J-zsF" firstAttribute="top" secondItem="3Bw-aG-KrA" secondAttribute="bottom" constant="18" id="KTv-cO-cqY"/>
+                            <constraint firstItem="mCS-FO-28s" firstAttribute="leading" secondItem="IiA-h2-cGB" secondAttribute="leading" id="Kzb-kQ-4G2"/>
+                            <constraint firstItem="3Bw-aG-KrA" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="MOS-XL-9mC"/>
+                            <constraint firstItem="bV0-La-IoJ" firstAttribute="bottom" secondItem="IiA-h2-cGB" secondAttribute="bottom" constant="3" id="SB5-3K-Odn"/>
+                            <constraint firstAttribute="bottom" secondItem="ZJl-vY-lwb" secondAttribute="bottom" constant="28" id="ZcS-xg-WsC"/>
+                            <constraint firstItem="lkx-4J-zsF" firstAttribute="trailing" secondItem="bV0-La-IoJ" secondAttribute="trailing" constant="-10" id="eEf-x2-8hX"/>
+                            <constraint firstItem="ZJl-vY-lwb" firstAttribute="trailing" secondItem="3Bw-aG-KrA" secondAttribute="trailing" constant="10" id="jaf-2e-UBp"/>
+                            <constraint firstItem="mCS-FO-28s" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="75" id="lPk-cP-UwN"/>
+                            <constraint firstItem="lkx-4J-zsF" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" constant="-5" id="mWS-zi-1lL"/>
+                            <constraint firstItem="mCS-FO-28s" firstAttribute="leading" secondItem="lkx-4J-zsF" secondAttribute="trailing" constant="29" id="nY9-6h-Cne"/>
                             <constraint firstItem="3Bw-aG-KrA" firstAttribute="leading" secondItem="lkx-4J-zsF" secondAttribute="leading" id="s7y-Vc-oVh"/>
-                            <constraint firstAttribute="trailing" secondItem="IiA-h2-cGB" secondAttribute="trailing" constant="96" id="ze1-bn-3zW"/>
+                            <constraint firstItem="bV0-La-IoJ" firstAttribute="leading" secondItem="ZJl-vY-lwb" secondAttribute="trailing" constant="14" id="uSd-vG-PNh"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="completeLabel" destination="IiA-h2-cGB" id="HZr-uA-naY"/>
+                        <outlet property="conversionSelector" destination="ZJl-vY-lwb" id="g6s-M8-93v"/>
                         <outlet property="convertButton" destination="bV0-La-IoJ" id="9TZ-hK-yLW"/>
                         <outlet property="fileLabel" destination="lkx-4J-zsF" id="0A6-tt-2jR"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="40" y="645"/>
         </scene>
     </scenes>
 </document>

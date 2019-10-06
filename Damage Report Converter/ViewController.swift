@@ -13,6 +13,7 @@ class ViewController: NSViewController {
     @IBOutlet weak var fileLabel: NSTextField!
     @IBOutlet weak var convertButton: NSButton!
     @IBOutlet weak var completeLabel: NSTextField!
+    @IBOutlet weak var conversionSelector: NSPopUpButton!
     var fileManager = FileManager()
     
     var URLs: [URL]!
@@ -22,6 +23,9 @@ class ViewController: NSViewController {
 
         // Do any additional setup after loading the view.
         convertButton.isEnabled = false
+        conversionSelector.removeAllItems()
+        conversionSelector.addItem(withTitle: "Mercury->Thorium")
+        conversionSelector.addItem(withTitle: "Missing Colons")
     }
 
     override var representedObject: Any? {
@@ -31,11 +35,14 @@ class ViewController: NSViewController {
             fileLabel.stringValue = ""
         }
     }
+    override func viewDidAppear() {
+        super.viewDidAppear()
+        self.view.window?.title = "Converter"
+    }
 
     @IBAction func selectFileClicked(sender: AnyObject) {
         completeLabel.stringValue = ""
         let fileSelect = NSOpenPanel()
-        fileSelect.title = "Select a Mercury Damage Report"
         fileSelect.allowsMultipleSelection = true
         fileSelect.canChooseDirectories = false
         fileSelect.allowedFileTypes = ["txt"]
@@ -55,24 +62,65 @@ class ViewController: NSViewController {
         }
     }
     
+    @IBAction func conversionChange(_ sender: Any) {
+        completeLabel.stringValue = ""
+    }
+    
     func processFile(fullURL: URL, newFolder: String)
     {
         var newFile = ""
         var newFileName = newFolder
         var count = 1
-        //var firstLine = true
         
         if fileManager.fileExists(atPath: fullURL.path) {
             do {
                 let fileData = try String(contentsOf: fullURL)
                 let stringData = fileData.components(separatedBy: .newlines)
                 
-                for line in stringData {
-                    let lineParts = line.split(separator: ";")
+                if conversionSelector.titleOfSelectedItem == "Mercury->Thorium" {
+                    
+                    let lineParts = fileData.split(separator: ";")
                     for step in lineParts {
-                        newFile.append("Step " + String(count) + ":\n")
+                        newFile.append("Step " + String(count) + ":")
+                        if step.prefix(1) != "\n" {
+                            newFile.append("\n")
+                        }
                         count += 1
                         newFile.append(String(step) + "\n")
+                    }
+                }
+                    
+                else if conversionSelector.titleOfSelectedItem == "Missing Colons" {
+                    for line in stringData {
+                        let words = line.split(separator: " ")
+                        var step = false
+                        var firstWord = true
+                        var hadStep = false
+                        for word in words {
+                            if word == "Step" {
+                                if !firstWord {
+                                    newFile.append("\n")
+                                }
+                                firstWord = false
+                                hadStep = true
+                                step = true
+                                newFile.append(String(word) + " ")
+                            }
+                            else {
+                                firstWord = false
+                                newFile.append(String(word))
+                                if step {
+                                    newFile.append(":\n")
+                                    step = false
+                                }
+                                else {
+                                    newFile.append(" ")
+                                }
+                            }
+                        }
+                        if !hadStep {
+                            newFile.append("\n")
+                        }
                     }
                 }
             }
@@ -103,14 +151,12 @@ class ViewController: NSViewController {
     @IBAction func convertClicked(sender: AnyObject) {
         completeLabel.stringValue = "Processing..."
         var newFolder = URLs[0].deletingLastPathComponent().path
-        if URLs.count > 1 {  //Multiple files, create folder for results
             newFolder += "/Thorium_Ready"
-            do {
-                try FileManager.default.createDirectory(atPath: newFolder, withIntermediateDirectories: false, attributes: nil)
-            }
-            catch {
-                print(error)
-            }
+        do {
+            try FileManager.default.createDirectory(atPath: newFolder, withIntermediateDirectories: false, attributes: nil)
+        }
+        catch {
+            print(error)
         }
         for file in URLs {
             processFile(fullURL: file, newFolder: newFolder)
