@@ -723,10 +723,13 @@
                                     <action selector="selectFileClickedWithSender:" target="XfG-lQ-9wD" id="2Nn-vg-8tJ"/>
                                 </connections>
                             </button>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bNu-63-ahY">
-                                <rect key="frame" x="45" y="115" width="206" height="102"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" placeholderString="No File Selected" id="xcD-8G-pjV">
-                                    <font key="font" metaFont="system"/>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3Bw-aG-KrA">
+                                <rect key="frame" x="45" y="220" width="132" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="128" id="U0X-HL-g5X"/>
+                                </constraints>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Selected File(s):" id="kgw-6P-req">
+                                    <font key="font" metaFont="system" size="18"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
@@ -755,10 +758,13 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Bw-aG-KrA">
-                                <rect key="frame" x="45" y="220" width="132" height="21"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Selected File(s):" id="kgw-6P-req">
-                                    <font key="font" metaFont="system" size="18"/>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="lkx-4J-zsF">
+                                <rect key="frame" x="45" y="115" width="223" height="97"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="97" id="Wlf-Im-OdB"/>
+                                </constraints>
+                                <textFieldCell key="cell" selectable="YES" title="No file selected" id="bxJ-kW-Ro8">
+                                    <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
@@ -766,24 +772,22 @@
                         </subviews>
                         <constraints>
                             <constraint firstItem="3Bw-aG-KrA" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="47" id="04y-Tp-H9L"/>
-                            <constraint firstItem="bNu-63-ahY" firstAttribute="top" secondItem="mCS-FO-28s" secondAttribute="top" id="4Vq-H2-EhA"/>
                             <constraint firstItem="IiA-h2-cGB" firstAttribute="top" secondItem="mCS-FO-28s" secondAttribute="bottom" constant="55" id="GKc-w1-XsZ"/>
                             <constraint firstAttribute="trailing" secondItem="mCS-FO-28s" secondAttribute="trailing" constant="90" id="Ik1-Pj-Buq"/>
-                            <constraint firstItem="mCS-FO-28s" firstAttribute="leading" secondItem="bNu-63-ahY" secondAttribute="trailing" constant="53" id="OIA-te-jAh"/>
-                            <constraint firstItem="bNu-63-ahY" firstAttribute="top" secondItem="3Bw-aG-KrA" secondAttribute="bottom" constant="8" symbolic="YES" id="ONw-Fm-hva"/>
+                            <constraint firstItem="lkx-4J-zsF" firstAttribute="top" secondItem="3Bw-aG-KrA" secondAttribute="bottom" constant="8" symbolic="YES" id="KTv-cO-cqY"/>
                             <constraint firstItem="bV0-La-IoJ" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="69" id="R0V-iL-Wj9"/>
                             <constraint firstItem="bV0-La-IoJ" firstAttribute="bottom" secondItem="IiA-h2-cGB" secondAttribute="bottom" id="SB5-3K-Odn"/>
-                            <constraint firstItem="3Bw-aG-KrA" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="63" id="Zkj-SC-wAt"/>
+                            <constraint firstItem="3Bw-aG-KrA" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="29" id="Zkj-SC-wAt"/>
                             <constraint firstAttribute="bottom" secondItem="bV0-La-IoJ" secondAttribute="bottom" constant="86" id="j1r-L8-as5"/>
-                            <constraint firstItem="bV0-La-IoJ" firstAttribute="top" secondItem="bNu-63-ahY" secondAttribute="bottom" constant="48" id="pP6-RU-1jr"/>
-                            <constraint firstItem="3Bw-aG-KrA" firstAttribute="leading" secondItem="bNu-63-ahY" secondAttribute="leading" id="wCp-eH-87V"/>
+                            <constraint firstItem="mCS-FO-28s" firstAttribute="leading" secondItem="lkx-4J-zsF" secondAttribute="trailing" constant="19" id="nY9-6h-Cne"/>
+                            <constraint firstItem="3Bw-aG-KrA" firstAttribute="leading" secondItem="lkx-4J-zsF" secondAttribute="leading" id="s7y-Vc-oVh"/>
                             <constraint firstAttribute="trailing" secondItem="IiA-h2-cGB" secondAttribute="trailing" constant="96" id="ze1-bn-3zW"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="completeLabel" destination="IiA-h2-cGB" id="HZr-uA-naY"/>
                         <outlet property="convertButton" destination="bV0-La-IoJ" id="9TZ-hK-yLW"/>
-                        <outlet property="fileLabel" destination="bNu-63-ahY" id="E1n-I8-kIn"/>
+                        <outlet property="fileLabel" destination="lkx-4J-zsF" id="0A6-tt-2jR"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

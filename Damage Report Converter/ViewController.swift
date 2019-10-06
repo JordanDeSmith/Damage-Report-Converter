@@ -15,8 +15,7 @@ class ViewController: NSViewController {
     @IBOutlet weak var completeLabel: NSTextField!
     var fileManager = FileManager()
     
-    var fileName: String!
-    var fullURL: URL!
+    var URLs: [URL]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +36,7 @@ class ViewController: NSViewController {
         completeLabel.stringValue = ""
         let fileSelect = NSOpenPanel()
         fileSelect.title = "Select a Mercury Damage Report"
-        fileSelect.allowsMultipleSelection = false
+        fileSelect.allowsMultipleSelection = true
         fileSelect.canChooseDirectories = false
         fileSelect.allowedFileTypes = ["txt"]
         
@@ -45,15 +44,19 @@ class ViewController: NSViewController {
         {
             
             if (fileSelect.urls.count > 0) {
-                fileName = fileSelect.urls[0].lastPathComponent
-                fullURL = fileSelect.urls[0]
-                fileLabel.stringValue = fileName
+                URLs = fileSelect.urls
                 convertButton.isEnabled = true
+                var files = ""
+                for file in fileSelect.urls {
+                    files += String(file.lastPathComponent) + "\n"
+                }
+                fileLabel.stringValue = files
             }
         }
     }
-    @IBAction func convertClicked(sender: AnyObject) {
-        completeLabel.stringValue = "Processing..."
+    
+    func processFile(fullURL: URL)
+    {
         var newFile = ""
         var newFileName = fullURL.deletingLastPathComponent().path
         var count = 1
@@ -78,7 +81,7 @@ class ViewController: NSViewController {
                 completeLabel.stringValue = "Error in file"
                 return
             }
-            var fileNoExtension = fileName
+            var fileNoExtension = String?(fullURL.lastPathComponent)
             for var i in (0...3) {
                 fileNoExtension?.removeLast()
                 i += 1
@@ -94,10 +97,16 @@ class ViewController: NSViewController {
                 completeLabel.stringValue = "Error converting file"
                 return
             }
-            
-            completeLabel.stringValue = "Done!"
         }
     }
-
-}
+    
+    @IBAction func convertClicked(sender: AnyObject) {
+        completeLabel.stringValue = "Processing..."
+        for file in URLs {
+            processFile(fullURL: file)
+        }
+            
+        completeLabel.stringValue = "Done!"
+        }
+    }
 
