@@ -55,10 +55,10 @@ class ViewController: NSViewController {
         }
     }
     
-    func processFile(fullURL: URL)
+    func processFile(fullURL: URL, newFolder: String)
     {
         var newFile = ""
-        var newFileName = fullURL.deletingLastPathComponent().path
+        var newFileName = newFolder
         var count = 1
         //var firstLine = true
         
@@ -102,8 +102,18 @@ class ViewController: NSViewController {
     
     @IBAction func convertClicked(sender: AnyObject) {
         completeLabel.stringValue = "Processing..."
+        var newFolder = URLs[0].deletingLastPathComponent().path
+        if URLs.count > 1 {  //Multiple files, create folder for results
+            newFolder += "/Thorium_Ready"
+            do {
+                try FileManager.default.createDirectory(atPath: newFolder, withIntermediateDirectories: false, attributes: nil)
+            }
+            catch {
+                print(error)
+            }
+        }
         for file in URLs {
-            processFile(fullURL: file)
+            processFile(fullURL: file, newFolder: newFolder)
         }
             
         completeLabel.stringValue = "Done!"
