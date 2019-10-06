@@ -77,21 +77,53 @@ class ViewController: NSViewController {
                 let fileData = try String(contentsOf: fullURL)
                 let stringData = fileData.components(separatedBy: .newlines)
                 
-                for line in stringData {
-                    if conversionSelector.titleOfSelectedItem == "Mercury->Thorium" {
-                        
-                        let lineParts = line.split(separator: ";")
-                        for step in lineParts {
-                            newFile.append("Step " + String(count) + ":\n")
-                            count += 1
-                            newFile.append(String(step) + "\n")
+                if conversionSelector.titleOfSelectedItem == "Mercury->Thorium" {
+                    
+                    let lineParts = fileData.split(separator: ";")
+                    for step in lineParts {
+                        newFile.append("Step " + String(count) + ":")
+                        if step.prefix(1) != "\n" {
+                            newFile.append("\n")
                         }
+                        count += 1
+                        newFile.append(String(step) + "\n")
                     }
-                    else if conversionSelector.titleOfSelectedItem == "Missing Colons" {
-                            print("Removing colons")
+                }
+                    
+                else if conversionSelector.titleOfSelectedItem == "Missing Colons" {
+                    for line in stringData {
+                        let words = line.split(separator: " ")
+                        var step = false
+                        var firstWord = true
+                        var hadStep = false
+                        for word in words {
+                            if word == "Step" {
+                                if !firstWord {
+                                    newFile.append("\n")
+                                }
+                                firstWord = false
+                                hadStep = true
+                                step = true
+                                newFile.append(String(word) + " ")
+                            }
+                            else {
+                                firstWord = false
+                                newFile.append(String(word))
+                                if step {
+                                    newFile.append(":\n")
+                                    step = false
+                                }
+                                else {
+                                    newFile.append(" ")
+                                }
+                            }
+                        }
+                        if !hadStep {
+                            newFile.append("\n")
                         }
                     }
                 }
+            }
             catch {
                 print(error)
                 completeLabel.stringValue = "Error in file"
@@ -119,14 +151,12 @@ class ViewController: NSViewController {
     @IBAction func convertClicked(sender: AnyObject) {
         completeLabel.stringValue = "Processing..."
         var newFolder = URLs[0].deletingLastPathComponent().path
-        if URLs.count > 1 {  //Multiple files, create folder for results
             newFolder += "/Thorium_Ready"
-            do {
-                try FileManager.default.createDirectory(atPath: newFolder, withIntermediateDirectories: false, attributes: nil)
-            }
-            catch {
-                print(error)
-            }
+        do {
+            try FileManager.default.createDirectory(atPath: newFolder, withIntermediateDirectories: false, attributes: nil)
+        }
+        catch {
+            print(error)
         }
         for file in URLs {
             processFile(fullURL: file, newFolder: newFolder)
